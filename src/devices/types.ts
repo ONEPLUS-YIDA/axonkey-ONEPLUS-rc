@@ -53,6 +53,7 @@ export type DeviceKind =
   | 'tclRc902v'
   | 'hisenseRcf3b65'
   | 'phicommDb1R'
+  | 'oneplusRc'
 
 export type DeviceSupportPackage = {
   kind: DeviceKind
