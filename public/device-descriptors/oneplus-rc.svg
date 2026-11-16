@@ -1,147 +1,206 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="480" height="703" viewBox="0 0 480 703" fill="none" role="img" aria-labelledby="t d" xmlns:ak="urn:axonkey:device:1" data-ak-schema="axonkey.device/1" data-ak-device="custom-device" data-ak-revision="1" data-ak-status="active">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:ak="urn:axonkey:device:1"
+     width="400" height="624" viewBox="0 0 400 624" fill="none" role="img"
+     aria-labelledby="title description"
+     data-ak-schema="axonkey.device/1" data-ak-device="oneplus-rc"
+     data-ak-revision="1" data-ak-status="active">
+  <title id="title">OnePlus TV 遥控器 RC-001A</title>
+  <desc id="description">13 个按键已按抓包结果标注；左侧正面，右侧侧面音量键。</desc>
   <metadata>
-    <ak:device schema="axonkey.device/1" id="custom-device" vendor="Realtek_BT" model="OnePlus RC" revision="1" display-name="Realtek_BT OnePlus RC" status="active">
-      <ak:identity>
-        <ak:match transport="bluetooth-hid" vid="0x012B31" pid="0x4858" service="00001812-0000-1000-8000-00805F9B34FB" windows-prefix="BTHLEDEVICE" information-required="true" manufacturer-contains="Realtek_BT" />
-      </ak:identity>
+    <ak:device schema="axonkey.device/1" id="oneplus-rc" vendor="OnePlus"
+               model="RC-001A" revision="1" display-name="OnePlus TV 遥控器 RC-001A" status="active">
       <ak:reports>
-        <!-- Captured bytes define these layouts; HID Usage Page remains unverified. -->
-        <ak:report id="captured-buttons-9" direction="input" report-id="0x01" length="9" encoding="bit-field" prefix="0x01 0x00 0x00" state-group="captured-buttons-9" />
-        <ak:report id="captured-buttons-3" direction="input" report-id="0x03" length="3" encoding="bit-field" prefix="0x03" state-group="captured-buttons-3" />
+        <ak:report id="captured-buttons-9" direction="input" report-id="0x01" length="9"
+                   encoding="bit-field" prefix="0x01 0x00 0x00" />
+        <ak:report id="captured-buttons-3" direction="input" report-id="0x03" length="3"
+                   encoding="bit-field" prefix="0x03" />
       </ak:reports>
+      <ak:identity>
+        <ak:match transport="bluetooth-hid" vid="0x2B31|0x012B31" pid="0x4858"
+                  service="00001812-0000-1000-8000-00805F9B34FB" windows-prefix="BTHLEDEVICE" />
+      </ak:identity>
       <ak:inputs>
-        <ak:input id="oneplus.up" label="方向上" kind="button" order="0" original="false" binding="captured"><ak:source report="captured-buttons-3" offset="1" bit="0" width="16" equals="0x0042"/><ak:hid-capture version="1" press="03 42 00" press-length="3" release="03 00 00" release-length="3"/></ak:input>
-        <ak:input id="oneplus.down" label="方向下" kind="button" order="1" original="false" binding="captured"><ak:source report="captured-buttons-3" offset="1" bit="0" width="16" equals="0x0043"/><ak:hid-capture version="1" press="03 43 00" press-length="3" release="03 00 00" release-length="3"/></ak:input>
-        <ak:input id="oneplus.left" label="方向左" kind="button" order="2" original="false" binding="captured"><ak:source report="captured-buttons-3" offset="1" bit="0" width="16" equals="0x0044"/><ak:hid-capture version="1" press="03 44 00" press-length="3" release="03 00 00" release-length="3"/></ak:input>
-        <ak:input id="oneplus.right" label="方向右" kind="button" order="3" original="false" binding="captured"><ak:source report="captured-buttons-3" offset="1" bit="0" width="16" equals="0x0045"/><ak:hid-capture version="1" press="03 45 00" press-length="3" release="03 00 00" release-length="3"/></ak:input>
-        <ak:input id="oneplus.ok" label="OK" kind="button" order="4" original="false" binding="captured"><ak:source report="captured-buttons-3" offset="1" bit="0" width="16" equals="0x0041"/><ak:hid-capture version="1" press="03 41 00" press-length="3" release="03 00 00" release-length="3"/></ak:input>
-        <ak:input id="oneplus.oneplus" label="OnePlus 键" kind="button" order="5" original="false" binding="captured"><ak:source report="captured-buttons-9" offset="3" bit="0" width="8" equals="0x3B"/><ak:hid-capture version="1" press="01 00 00 3B 00 00 00 00 00" press-length="9" release="01 00 00 00 00 00 00 00 00" release-length="9"/></ak:input>
-        <ak:input id="oneplus.assistant" label="Google Assistant 键" kind="button" order="6" original="false" binding="captured"><ak:source report="captured-buttons-3" offset="1" bit="0" width="16" equals="0x0221"/><ak:hid-capture version="1" press="03 21 02" press-length="3" release="03 00 00" release-length="3"/></ak:input>
-        <ak:input id="oneplus.menu" label="Menu 键" kind="button" order="7" original="false" binding="captured"><ak:source report="captured-buttons-3" offset="1" bit="0" width="16" equals="0x0040"/><ak:hid-capture version="1" press="03 40 00" press-length="3" release="03 00 00" release-length="3"/></ak:input>
-        <ak:input id="oneplus.volume.up" label="音量加" kind="button" order="8" original="false" binding="captured"><ak:source report="captured-buttons-3" offset="1" bit="0" width="16" equals="0x00E9"/><ak:hid-capture version="1" press="03 E9 00" press-length="3" release="03 00 00" release-length="3"/></ak:input>
-        <ak:input id="oneplus.volume.down" label="音量减" kind="button" order="9" original="false" binding="captured"><ak:source report="captured-buttons-3" offset="1" bit="0" width="16" equals="0x00EA"/><ak:hid-capture version="1" press="03 EA 00" press-length="3" release="03 00 00" release-length="3"/></ak:input>
-        <ak:input id="oneplus.back" label="Back 键" kind="button" order="10" original="false" binding="captured"><ak:source report="captured-buttons-3" offset="1" bit="0" width="16" equals="0x0224"/><ak:hid-capture version="1" press="03 24 02" press-length="3" release="03 00 00" release-length="3"/></ak:input>
-        <ak:input id="oneplus.home" label="Home 键" kind="button" order="11" original="false" binding="captured"><ak:source report="captured-buttons-3" offset="1" bit="0" width="16" equals="0x0223"/><ak:hid-capture version="1" press="03 23 02" press-length="3" release="03 00 00" release-length="3"/></ak:input>
-        <ak:input id="oneplus.prime" label="Prime Video 键" kind="button" order="12" original="false" binding="captured"><ak:source report="captured-buttons-9" offset="3" bit="0" width="8" equals="0x3C"/><ak:hid-capture version="1" press="01 00 00 3C 00 00 00 00 00" press-length="9" release="01 00 00 00 00 00 00 00 00" release-length="9"/></ak:input>
+        <ak:input id="oneplus.up" label="方向上" short="上" icon="up" kind="button"
+                  order="0" target="#navUp" original="false">
+          <ak:source report="captured-buttons-3" offset="1" bit="0" width="16" equals="0x0042"/>
+        </ak:input>
+        <ak:input id="oneplus.left" label="方向左" short="左" icon="left" kind="button"
+                  order="2" target="#navLeft" original="false">
+          <ak:source report="captured-buttons-3" offset="1" bit="0" width="16" equals="0x0044"/>
+        </ak:input>
+        <ak:input id="oneplus.right" label="方向右" short="右" icon="right" kind="button"
+                  order="3" target="#navRight" original="false">
+          <ak:source report="captured-buttons-3" offset="1" bit="0" width="16" equals="0x0045"/>
+        </ak:input>
+        <ak:input id="oneplus.down" label="方向下" short="下" icon="down" kind="button"
+                  order="1" target="#navDown" original="false">
+          <ak:source report="captured-buttons-3" offset="1" bit="0" width="16" equals="0x0043"/>
+        </ak:input>
+        <ak:input id="oneplus.ok" label="OK" short="确认" icon="center" kind="button"
+                  order="4" target="#ok" original="false">
+          <ak:source report="captured-buttons-3" offset="1" bit="0" width="16" equals="0x0041"/>
+        </ak:input>
+        <ak:input id="oneplus.back" label="Back 键" short="返回" icon="back" kind="button"
+                  order="10" target="#back" original="false">
+          <ak:source report="captured-buttons-3" offset="1" bit="0" width="16" equals="0x0224"/>
+        </ak:input>
+        <ak:input id="oneplus.home" label="Home 键" short="主页" icon="home" kind="button"
+                  order="11" target="#home" original="false">
+          <ak:source report="captured-buttons-3" offset="1" bit="0" width="16" equals="0x0223"/>
+        </ak:input>
+        <ak:input id="oneplus.oneplus" label="OnePlus 键" short="1+" icon="m" kind="button"
+                  order="5" target="#onePlus" original="false">
+          <ak:source report="captured-buttons-9" offset="3" bit="0" width="8" equals="0x3B"/>
+        </ak:input>
+        <ak:input id="oneplus.assistant" label="Google Assistant 键" short="语音" icon="mic" kind="button"
+                  order="6" target="#assistant" original="false">
+          <ak:source report="captured-buttons-3" offset="1" bit="0" width="16" equals="0x0221"/>
+        </ak:input>
+        <ak:input id="oneplus.menu" label="Menu 键" short="菜单" icon="menu" kind="button"
+                  order="7" target="#menu" original="false">
+          <ak:source report="captured-buttons-3" offset="1" bit="0" width="16" equals="0x0040"/>
+        </ak:input>
+        <ak:input id="oneplus.prime" label="Prime Video 键" short="Prime" icon="tv" kind="button"
+                  order="12" target="#primeVideo" original="false">
+          <ak:source report="captured-buttons-9" offset="3" bit="0" width="8" equals="0x3C"/>
+        </ak:input>
+        <ak:input id="oneplus.volume.up" label="音量加" short="音量+" icon="volumeUp" kind="button"
+                  order="8" target="#volumeUp" original="false">
+          <ak:source report="captured-buttons-3" offset="1" bit="0" width="16" equals="0x00E9"/>
+        </ak:input>
+        <ak:input id="oneplus.volume.down" label="音量减" short="音量−" icon="volumeDown" kind="button"
+                  order="9" target="#volumeDown" original="false">
+          <ak:source report="captured-buttons-3" offset="1" bit="0" width="16" equals="0x00EA"/>
+        </ak:input>
       </ak:inputs>
     </ak:device>
   </metadata>
-  <title id="t">OnePlus TV 遥控器 RC-001A 按键图</title>
-  <desc id="d">正面按键示意，导航环分上、下、左、右四个方向，另含确认、返回、主页、菜单、OnePlus、语音助手、Prime Video 与侧面音量键。</desc>
 
-  <rect width="480" height="703" fill="#ffffff" />
+  <g data-ak-view="front">
+    <!-- 机身：外轮廓与内侧细边，照片里的双线在图中保留为两条线 -->
+    <rect x="12" y="12" width="173" height="600" rx="33" fill="#ffffff" stroke="#b9bcc2" stroke-width="1.4" />
+    <rect x="18" y="18" width="161" height="588" rx="28" fill="none" stroke="#e2e5e9" stroke-width="1" />
 
-  <!-- 机身 -->
-  <rect x="158" y="51" width="173" height="600" rx="33" fill="#ffffff" stroke="#b9bcc2" stroke-width="1.4" />
-  <rect x="164" y="57" width="161" height="588" rx="28" fill="none" stroke="#e4e7ea" stroke-width="1" />
+    <!-- 导航环：外侧圆角方环 + 内部确认键，环底色为白、边界细线 -->
+    <path fill-rule="evenodd" fill="#ffffff" stroke="#b9bcc2" stroke-width="1.2"
+          d="M 51,20 H 143 A 30,30 0 0 1 173,50 V 144 A 30,30 0 0 1 143,174 H 51
+             A 30,30 0 0 1 21,144 V 50 A 30,30 0 0 1 51,20 Z
+             M 81,68 H 115 A 14,14 0 0 1 129,82 V 114 A 14,14 0 0 1 115,128 H 81
+             A 14,14 0 0 1 67,114 V 82 A 14,14 0 0 1 81,68 Z" />
 
-  <!-- 导航环：外圈圆角方环，中间挖空给确认键 -->
-  <path fill="#ffffff" fill-rule="evenodd" stroke="#b9bcc2" stroke-width="1.2"
-        d="M 197,59 H 289 A 30,30 0 0 1 319,89 V 183 A 30,30 0 0 1 289,213 H 197
-           A 30,30 0 0 1 167,183 V 89 A 30,30 0 0 1 197,59 Z
-           M 227,107 H 261 A 14,14 0 0 1 275,121 V 153 A 14,14 0 0 1 261,167 H 227
-           A 14,14 0 0 1 213,153 V 121 A 14,14 0 0 1 227,107 Z" />
+    <g id="ok" data-ak-key="oneplus.ok" data-ak-role="input"
+       aria-label="确认键" role="button" tabindex="0">
+      <rect x="67" y="68" width="62" height="60" rx="14" fill="#f7f8f9" stroke="#b9bcc2" stroke-width="1.2" />
+      <circle cx="98" cy="98" r="3.4" fill="#4b4c52" />
+    </g>
 
-  <!-- 方向标注 -->
-  <g font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="13" font-weight="600"
-     fill="#5b5f66" text-anchor="middle">
-    <text x="243" y="88">上</text>
-    <text x="243" y="195">下</text>
-    <text x="190" y="141">左</text>
-    <text x="297" y="141">右</text>
+    <g id="navUp" data-ak-key="oneplus.up" data-ak-role="input"
+       aria-label="导航上" role="button" tabindex="0">
+      <path d="M 91,47 L 97,40 L 103,47" stroke="#6b6d74" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+    </g>
+    <g id="navDown" data-ak-key="oneplus.down" data-ak-role="input"
+       aria-label="导航下" role="button" tabindex="0">
+      <path d="M 91,148 L 97,155 L 103,148" stroke="#6b6d74" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+    </g>
+    <g id="navLeft" data-ak-key="oneplus.left" data-ak-role="input"
+       aria-label="导航左" role="button" tabindex="0">
+      <path d="M 47,91 L 40,97 L 47,103" stroke="#6b6d74" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+    </g>
+    <g id="navRight" data-ak-key="oneplus.right" data-ak-role="input"
+       aria-label="导航右" role="button" tabindex="0">
+      <path d="M 147,91 L 154,97 L 147,103" stroke="#6b6d74" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+    </g>
+
+    <!-- 左列：OnePlus 键 / 语音助手 / 菜单 -->
+    <g id="onePlus" data-ak-key="oneplus.oneplus" data-ak-role="input"
+       aria-label="OnePlus 键" role="button" tabindex="0">
+      <circle cx="61" cy="212.5" r="26.5" fill="#47484d" />
+      <text x="61" y="219" text-anchor="middle" font-family="sans-serif" font-size="19"
+            font-weight="600" fill="#d6d7da">1+</text>
+    </g>
+    <g id="assistant" data-ak-key="oneplus.assistant" data-ak-role="input"
+       aria-label="语音助手键" role="button" tabindex="0">
+      <circle cx="61" cy="277.5" r="26.5" fill="#47484d" />
+      <circle cx="52" cy="272" r="6.2" fill="#4285f4" />
+      <circle cx="65" cy="286" r="3.4" fill="#ea4335" />
+      <circle cx="68" cy="271" r="2.6" fill="#34a853" />
+      <circle cx="54" cy="286" r="3.4" fill="#fbbc05" />
+    </g>
+    <g id="menu" data-ak-key="oneplus.menu" data-ak-role="input"
+       aria-label="菜单键" role="button" tabindex="0">
+      <circle cx="61" cy="343" r="26.5" fill="#47484d" />
+      <path d="M 52,336 H 70 M 52,343 H 70 M 52,350 H 70" stroke="#c9cacd" stroke-width="2.2" stroke-linecap="round" />
+    </g>
+
+    <!-- 右列：返回/主页胶囊与 Prime Video -->
+    <g id="back" data-ak-key="oneplus.back" data-ak-role="input"
+       aria-label="返回键" role="button" tabindex="0">
+      <path d="M 110,212 A 26,26 0 0 1 162,212 V 245 H 110 Z" fill="#47484d" />
+      <path d="M 144,216 H 131 M 136,210 L 130,216 L 136,222" stroke="#c9cacd" stroke-width="2.2"
+            stroke-linecap="round" stroke-linejoin="round" fill="none" />
+    </g>
+    <g id="home" data-ak-key="oneplus.home" data-ak-role="input"
+       aria-label="主页键" role="button" tabindex="0">
+      <path d="M 110,245 H 162 V 278 A 26,26 0 0 1 110,278 Z" fill="#47484d" />
+      <circle cx="136" cy="276" r="7.5" stroke="#c9cacd" stroke-width="2.2" fill="none" />
+    </g>
+    <g id="primeVideo" data-ak-key="oneplus.prime" data-ak-role="input"
+       aria-label="Prime Video 键" role="button" tabindex="0">
+      <circle cx="136" cy="343" r="26.5" fill="#47484d" />
+      <text x="136" y="340" text-anchor="middle" font-family="sans-serif" font-size="9.5"
+            font-weight="700" fill="#00a8e1">prime</text>
+      <text x="136" y="351" text-anchor="middle" font-family="sans-serif" font-size="9.5"
+            font-weight="700" fill="#00a8e1">video</text>
+    </g>
+
+    <!-- 正面露出的音量键轮廓：仅作装饰，输入建在侧视图 -->
+    <rect x="184" y="181" width="6" height="80" rx="3" fill="#eceef0" stroke="#b9bcc2" stroke-width="1" />
   </g>
 
-  <!-- 确认键 -->
-  <rect x="213" y="107" width="62" height="60" rx="14" fill="#f7f8f9" stroke="#b9bcc2" stroke-width="1.2" />
-  <circle cx="244" cy="137" r="3.2" fill="#4b4c52" />
-
-  <!-- 左列 -->
-  <g>
-    <circle cx="207" cy="251.5" r="26.5" fill="#47484d" />
-    <text x="207" y="258" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="19"
-          font-weight="600" fill="#d6d7da">1+</text>
-  </g>
-  <g>
-    <circle cx="207" cy="316.5" r="26.5" fill="#47484d" />
-    <circle cx="198" cy="311" r="6.2" fill="#4285f4" />
-    <circle cx="211" cy="325" r="3.4" fill="#ea4335" />
-    <circle cx="214" cy="310" r="2.6" fill="#34a853" />
-    <circle cx="200" cy="325" r="3.4" fill="#fbbc05" />
-  </g>
-  <g>
-    <circle cx="207" cy="382" r="26.5" fill="#47484d" />
-    <path d="M 198,375 H 216 M 198,382 H 216 M 198,389 H 216" stroke="#c9cacd" stroke-width="2.2"
-          stroke-linecap="round" />
+  <g data-ak-view="side">
+    <!-- 侧面示意：扁平底板 + 音量摇杆上下两段 -->
+    <rect x="215" y="168" width="28" height="106" rx="4" fill="#f4f5f7" stroke="#b9bcc2" stroke-width="1.2" />
+    <g id="volumeUp" data-ak-key="oneplus.volume.up" data-ak-role="input"
+       aria-label="音量加" role="button" tabindex="0">
+      <rect x="219" y="181" width="20" height="40" rx="3" fill="#47484d" />
+      <path d="M 229,194 V 208 M 223,201 H 235" stroke="#c9cacd" stroke-width="1.8" stroke-linecap="round" />
+    </g>
+    <g id="volumeDown" data-ak-key="oneplus.volume.down" data-ak-role="input"
+       aria-label="音量减" role="button" tabindex="0">
+      <rect x="219" y="221" width="20" height="40" rx="3" fill="#47484d" />
+      <path d="M 223,241 H 235" stroke="#c9cacd" stroke-width="1.8" stroke-linecap="round" />
+    </g>
   </g>
 
-  <!-- 右列：返回 / 主页胶囊 + Prime Video -->
-  <path d="M 256,251 A 26,26 0 0 1 308,251 L 308,284 L 256,284 Z" fill="#47484d" />
-  <path d="M 290,268 H 277 M 282,262 L 276,268 L 282,274" stroke="#c9cacd" stroke-width="2.2"
-        stroke-linecap="round" stroke-linejoin="round" fill="none" />
-  <path d="M 256,284 L 308,284 L 308,317 A 26,26 0 0 1 256,317 Z" fill="#47484d" />
-  <circle cx="282" cy="315" r="7.5" stroke="#c9cacd" stroke-width="2.2" fill="none" />
-
-  <g>
-    <circle cx="282" cy="382" r="26.5" fill="#47484d" />
-    <text x="282" y="379" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="9.5"
-          font-weight="700" fill="#00a8e1">prime</text>
-    <text x="282" y="390" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="9.5"
-          font-weight="700" fill="#00a8e1">video</text>
-  </g>
-
-  <!-- 右侧音量键（上 + / 下 −） -->
-  <rect x="330" y="220" width="6" height="80" rx="3" fill="#eceef0" stroke="#b9bcc2" stroke-width="1" />
-  <text x="341" y="230" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="12"
-        font-weight="600" fill="#5b5f66">+</text>
-  <text x="341" y="292" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="12"
-        font-weight="600" fill="#5b5f66">−</text>
-
-  <!-- 引线与标注 -->
-  <g stroke="#4a4d53" stroke-width="1" stroke-linecap="round">
-    <line x1="140" y1="270" x2="186" y2="254" />
-    <line x1="136" y1="326" x2="186" y2="318" />
-    <line x1="136" y1="396" x2="186" y2="384" />
-    <polyline points="250,141 260,157 350,157" fill="none" />
-    <line x1="350" y1="268" x2="314" y2="268" />
-    <line x1="350" y1="332" x2="314" y2="332" />
-    <line x1="350" y1="394" x2="310" y2="394" />
-  </g>
-  <g fill="#8d939b">
-    <circle cx="190" cy="251.5" r="3" />
-    <circle cx="190" cy="316.5" r="3" />
-    <circle cx="190" cy="382" r="3" />
-    <circle cx="246" cy="139" r="3" />
-    <circle cx="308" cy="268" r="3" />
-    <circle cx="308" cy="332" r="3" />
-    <circle cx="304" cy="394" r="3" />
-  </g>
-
-  <g font-family="'Segoe UI','Microsoft YaHei',sans-serif" font-size="12.5" fill="#3a3d44">
-    <text x="70" y="274">OnePlus</text>
-    <text x="58" y="322">Google</text>
-    <text x="58" y="337">Assistant</text>
-    <text x="96" y="400">Menu</text>
-    <text x="357" y="162">OK</text>
-    <text x="357" y="272">Back</text>
-    <text x="357" y="336">Home</text>
-    <text x="357" y="398">Prime Video</text>
-  </g>
-
-  <!-- 可点击热点（对应按键 ID） -->
-  <g class="hotspot" fill="transparent" pointer-events="all">
-    <circle cx="243" cy="88" r="18" data-ak-key="oneplus.up" aria-label="方向上"/>
-    <circle cx="243" cy="195" r="18" data-ak-key="oneplus.down" aria-label="方向下"/>
-    <circle cx="190" cy="141" r="18" data-ak-key="oneplus.left" aria-label="方向左"/>
-    <circle cx="297" cy="141" r="18" data-ak-key="oneplus.right" aria-label="方向右"/>
-    <rect x="213" y="107" width="62" height="60" rx="14" data-ak-key="oneplus.ok" aria-label="OK"/>
-    <circle cx="207" cy="251.5" r="26.5" data-ak-key="oneplus.oneplus" aria-label="OnePlus 键"/>
-    <circle cx="207" cy="316.5" r="26.5" data-ak-key="oneplus.assistant" aria-label="Google Assistant 键"/>
-    <circle cx="207" cy="382" r="26.5" data-ak-key="oneplus.menu" aria-label="Menu 键"/>
-    <rect x="330" y="220" width="6" height="40" rx="3" data-ak-key="oneplus.volume.up" aria-label="音量加"/>
-    <rect x="330" y="260" width="6" height="40" rx="3" data-ak-key="oneplus.volume.down" aria-label="音量减"/>
-    <circle cx="282" cy="268" r="24" data-ak-key="oneplus.back" aria-label="Back 键"/>
-    <circle cx="282" cy="301" r="22" data-ak-key="oneplus.home" aria-label="Home 键"/>
-    <circle cx="282" cy="382" r="26.5" data-ak-key="oneplus.prime" aria-label="Prime Video 键"/>
+  <g data-ak-regions="true" fill="transparent" pointer-events="none">
+    <path data-ak-region="oneplus.up" data-ak-anchor="97 44"
+          d="M 67,68 L 129,68 L 167,33 Q 173,20 143,20 L 51,20 Q 21,20 27,33 Z" />
+    <path data-ak-region="oneplus.left" data-ak-anchor="44 97"
+          d="M 67,68 L 67,128 L 27,161 Q 21,174 21,144 L 21,50 Q 21,20 27,33 Z" />
+    <path data-ak-region="oneplus.right" data-ak-anchor="151 97"
+          d="M 129,68 L 129,128 L 167,161 Q 173,174 173,144 L 173,50 Q 173,20 167,33 Z" />
+    <path data-ak-region="oneplus.down" data-ak-anchor="97 151"
+          d="M 67,128 L 129,128 L 167,161 Q 173,174 143,174 L 51,174 Q 21,174 27,161 Z" />
+    <path data-ak-region="oneplus.ok" data-ak-anchor="98 98"
+          d="M 81,68 H 115 A 14,14 0 0 1 129,82 V 114 A 14,14 0 0 1 115,128 H 81
+             A 14,14 0 0 1 67,114 V 82 A 14,14 0 0 1 81,68 Z" />
+    <path data-ak-region="oneplus.back" data-ak-anchor="136 216"
+          d="M 110,212 A 26,26 0 0 1 162,212 L 162,245 L 110,245 Z" />
+    <path data-ak-region="oneplus.home" data-ak-anchor="136 274"
+          d="M 110,245 L 162,245 L 162,278 A 26,26 0 0 1 110,278 Z" />
+    <path data-ak-region="oneplus.oneplus" data-ak-anchor="61 212.5"
+          d="M 34.5,212.5 A 26.5,26.5 0 1 0 87.5,212.5 A 26.5,26.5 0 1 0 34.5,212.5 Z" />
+    <path data-ak-region="oneplus.assistant" data-ak-anchor="61 277.5"
+          d="M 34.5,277.5 A 26.5,26.5 0 1 0 87.5,277.5 A 26.5,26.5 0 1 0 34.5,277.5 Z" />
+    <path data-ak-region="oneplus.menu" data-ak-anchor="61 343"
+          d="M 34.5,343 A 26.5,26.5 0 1 0 87.5,343 A 26.5,26.5 0 1 0 34.5,343 Z" />
+    <path data-ak-region="oneplus.prime" data-ak-anchor="136 343"
+          d="M 109.5,343 A 26.5,26.5 0 1 0 162.5,343 A 26.5,26.5 0 1 0 109.5,343 Z" />
+    <path data-ak-region="oneplus.volume.up" data-ak-anchor="229 201"
+          d="M 222,181 H 236 A 3,3 0 0 1 239,184 V 218 A 3,3 0 0 1 236,221 H 222
+             A 3,3 0 0 1 219,218 V 184 A 3,3 0 0 1 222,181 Z" />
+    <path data-ak-region="oneplus.volume.down" data-ak-anchor="229 241"
+          d="M 222,221 H 236 A 3,3 0 0 1 239,224 V 258 A 3,3 0 0 1 236,261 H 222
+             A 3,3 0 0 1 219,258 V 224 A 3,3 0 0 1 222,221 Z" />
   </g>
 </svg>
