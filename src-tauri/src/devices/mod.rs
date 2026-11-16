@@ -9,6 +9,7 @@ pub(crate) mod shared;
 pub(crate) mod tcl_rc802a;
 pub(crate) mod tcl_rc902n;
 pub(crate) mod tcl_rc902v;
+pub(crate) mod oneplus_rc;
 #[cfg(test)]
 mod xbox;
 pub(crate) mod xiaomi_remote;
