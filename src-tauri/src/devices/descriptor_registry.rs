@@ -13,6 +13,7 @@ pub(crate) const KINDS: &[&str] = &[
     "hisenseRcf3b65",
     "phicommDb1R",
     "xboxBluetooth",
+    "oneplusRc",
 ];
 
 /// Return the bundled descriptor for a discovered device kind.
@@ -32,6 +33,7 @@ pub(crate) fn descriptor_for_kind(kind: &str) -> Option<&'static DeviceDescripto
         "hisenseRcf3b65" => crate::devices::hisense_rcf3b65::descriptor(),
         "phicommDb1R" => crate::devices::phicomm_db1_r::descriptor(),
         "xboxBluetooth" => xbox(),
+        "oneplusRc" => crate::devices::oneplus_rc::descriptor(),
         _ => None,
     }
 }
